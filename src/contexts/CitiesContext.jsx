@@ -1,6 +1,8 @@
 import { createContext, useEffect, useReducer, useCallback } from "react";
 
-const URL = "http://localhost:9000";
+// const URL = "http://localhost:9000";
+const URL =
+  "https://github.com/UdayaKumarS-N05/JSON-Server/blob/[main|master]/db.json";
 
 export const CitiesContext = createContext();
 const initialState = {
