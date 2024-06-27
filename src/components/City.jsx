@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import styles from "./City.module.css";
-import { useCitiesContext } from "../contexts/useCitiesContext";
+import { useCitiesContext } from "../contexts/CitiesContext";
 import { useEffect } from "react";
 import Spinner from "./Spinner";
 import { ReactCountryFlag } from "react-country-flag";

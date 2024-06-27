@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./CityItem.module.css";
-import { useCitiesContext } from "../contexts/useCitiesContext";
+import { useCitiesContext } from "../contexts/CitiesContext";
 import { ReactCountryFlag } from "react-country-flag";
 import { codes } from "iso-country-codes";
 const formatDate = (date) =>

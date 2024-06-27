@@ -9,7 +9,7 @@ import Spinner from "./Spinner.jsx";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
-import { useCitiesContext } from "../contexts/useCitiesContext.jsx";
+import { useCitiesContext } from "../contexts/CitiesContext.jsx";
 import { useNavigate } from "react-router-dom";
 // export function convertToEmoji(countryCode) {
 //   const codePoints = countryCode
