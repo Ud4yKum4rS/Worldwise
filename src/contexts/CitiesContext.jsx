@@ -139,7 +139,7 @@
 
 // export { CitiesContextProvider };
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage.js";
 
 const CitiesContext = createContext();
@@ -189,11 +189,4 @@ function CitiesContextProvider({ children }) {
   );
 }
 
-function useLocalCities() {
-  const context = useContext(CitiesContextProvider);
-  if (context === undefined)
-    throw new Error("CitiesContext was used outside the CitiesProvider");
-  return context;
-}
-
-export { CitiesContextProvider, useLocalCities };
+export { CitiesContextProvider };

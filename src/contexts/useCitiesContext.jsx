@@ -9,3 +9,12 @@
 //     );
 //   return context;
 // }
+
+import { useContext } from "react";
+import { CitiesContextProvider } from "./CitiesContext";
+export function useCitiesContext() {
+  const context = useContext(CitiesContextProvider);
+  if (context === undefined)
+    throw new Error("CitiesContext was used outside the CitiesProvider");
+  return context;
+}
