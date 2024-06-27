@@ -142,9 +142,9 @@
 import { createContext, useContext, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage.js";
 
-const CitiesContextProvider = createContext();
+const CitiesContext = createContext();
 
-function LocalCitiesProvider({ children }) {
+function CitiesContextProvider({ children }) {
   const [cities, setCities] = useLocalStorage([], "cities");
   const [currentCity, setCurrentCity] = useState({});
 
@@ -174,7 +174,7 @@ function LocalCitiesProvider({ children }) {
   }
 
   return (
-    <CitiesContextProvider.Provider
+    <CitiesContext.Provider
       value={{
         cities,
         currentCity,
@@ -185,7 +185,7 @@ function LocalCitiesProvider({ children }) {
       }}
     >
       {children}
-    </CitiesContextProvider.Provider>
+    </CitiesContext.Provider>
   );
 }
 
@@ -196,4 +196,4 @@ function useLocalCities() {
   return context;
 }
 
-export { LocalCitiesProvider, useLocalCities };
+export { CitiesContextProvider, useLocalCities };
